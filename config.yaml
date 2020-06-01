@@ -1,0 +1,43 @@
+api_version: 2
+vm:
+  base_box: 'ubuntu/focal64'
+  base_box_version: '20200529.1.0'
+  name: 'ubuntuDevBox'
+  cpus: 2
+  memory: 4096
+  providers:
+    virtualbox:
+      gui: false
+provisioners:
+  - base:
+      enable: true
+      before: :all
+      type: shell
+      path: provision/base.sh
+      privileged: true
+  - python:
+      enable: true
+      type: shell
+      path: provision/python.sh
+      privileged: true
+  - docker:
+      enable: true
+      type: shell
+      path: provision/docker.sh
+      privileged: true
+  - web-development:
+      enable: true
+      type: shell
+      path: provision/web-development.sh
+      privileged: true
+  - desktop:
+      enable: false
+      type: shell
+      path: provision/desktop.sh
+      privileged: true
+  - clean-up:
+      enable: true
+      after: :all
+      type: shell
+      path: provision/clean-up.sh
+      privileged: true
