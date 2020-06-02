@@ -1,13 +1,13 @@
 api_version: 2
 vm:
-  base_box: 'ubuntu/focal64'
-  base_box_version: '20200529.1.0'
-  name: 'ubuntuDevBox'
-  cpus: 2
-  memory: 4096
+  base_box: 'ubuntu/bionic64'
+  base_box_version: '20200525.0.0'
+  name: 'ubuntu-dev-box'
+  cpus: 1
+  memory: 1024
   providers:
     virtualbox:
-      gui: false
+      gui: true
 provisioners:
   - base:
       enable: true
@@ -31,7 +31,7 @@ provisioners:
       path: provision/web-development.sh
       privileged: true
   - desktop:
-      enable: false
+      enable: true
       type: shell
       path: provision/desktop.sh
       privileged: true

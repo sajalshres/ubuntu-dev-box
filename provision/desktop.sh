@@ -20,3 +20,7 @@ apt-get install -y xfce4 virtualbox-guest-dkms virtualbox-guest-utils virtualbox
 apt-get install -y lightdm lightdm-gtk-greeter
 # Optional: Install a more feature-rich applications menu
 apt-get install -y xfce4-whiskermenu-plugin
+
+# Set default config for xfce4 desktop
+runuser -l vagrant -c "mkdir ~/.config/xfce4"
+runuser -l vagrant -c "cp -R /etc/xdg/xfce4/xfconf/ ~/.config/xfce4"
