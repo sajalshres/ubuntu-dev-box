@@ -1,5 +1,5 @@
 #!/bin/sh
-set -ex
+set +ex
 
 # Add Docker’s official GPG key
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -

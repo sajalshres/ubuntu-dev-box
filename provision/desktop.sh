@@ -1,5 +1,5 @@
 #!/bin/sh
-set -ex
+set +ex
 
 # https://askubuntu.com/questions/1067929/on-18-04-package-virtualbox-guest-utils-does-not-exist
 apt-add-repository -y multiverse

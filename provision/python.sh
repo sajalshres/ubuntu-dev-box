@@ -1,5 +1,5 @@
 #!/bin/sh
-set -ex
+set +ex
 
 # Add Python Ubuntu repository
 add-apt-repository -y ppa:deadsnakes/ppa

@@ -1,5 +1,5 @@
 #!/bin/sh
-set -ex
+set +ex
 
 # Clean up dependencies no longer needed
 apt-get autoremove -y
