@@ -1,7 +1,7 @@
 api_version: 2
 vm:
   base_box: 'ubuntu/bionic64'
-  base_box_version: '20200605.0.0'
+  base_box_version: '20201007.0.0'
   name: 'ubuntu-dev-box'
   cpus: 1
   memory: 1024
