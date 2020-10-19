@@ -2,7 +2,7 @@
 set +ex
 
 # Add NodeJS repository
-curl -sL https://deb.nodesource.com/setup_13.x | bash -
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
 # Update package index
 apt-get update
 # Install Node.js

@@ -10,5 +10,9 @@ apt-get -y install python3.7
 # Install pip
 curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py -s
 python3.7 /tmp/get-pip.py
+rm -f /tmp/get-pip.py
 # Install base Python packages
 pip3.7 install virtualenv
+# Update default python to 3.7
+rm -f /usr/bin/python
+ln -s /usr/bin/python3.7 /usr/bin/python

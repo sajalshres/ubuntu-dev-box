@@ -1,8 +1,8 @@
 api_version: 2
 vm:
-  base_box: 'ubuntu/bionic64'
-  base_box_version: '20201007.0.0'
-  name: 'ubuntu-dev-box'
+  base_box: "ubuntu/bionic64"
+  base_box_version: "20201007.0.0"
+  name: "ubuntu-dev-box"
   cpus: 1
   memory: 1024
   providers:
@@ -25,6 +25,11 @@ provisioners:
       type: shell
       path: provision/docker.sh
       privileged: true
+  - kubernetes:
+      enable: false
+      type: shell
+      path: provision/kubernetes.sh
+      privileged: true
   - web-development:
       enable: true
       type: shell
@@ -34,6 +39,11 @@ provisioners:
       enable: true
       type: shell
       path: provision/desktop.sh
+      privileged: true
+  - viber:
+      enable: true
+      type: shell
+      path: provision/viber.sh
       privileged: true
   - clean-up:
       enable: true
