@@ -1,5 +1,9 @@
 ---
-dist: bionic
+os: linux
+matrix:
+  include:
+    - dist: bionic
+
 language: python
 
 # Cache the big Vagrant boxes
