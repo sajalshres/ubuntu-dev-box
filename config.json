@@ -1,6 +1,6 @@
 {
     "variables": {
-        "vagrant_access_token": "{{ env `VAGRANT_ACCESS_TOKEN` }}"
+        "cloud_token": "{{ env `VAGRANT_CLOUD_TOKEN` }}"
     },
     "provisioners": [
         {
@@ -25,7 +25,7 @@
             "type": "vagrant-cloud",
             "box_tag": "sajalshres/ubuntu-dev-box",
             "keep_input_artifact": true,
-            "access_token": "{{user `vagrant_access_token`}}",
+            "access_token": "{{user `cloud_token`}}",
             "version": "{{isotime \"2006.01.02.0.0\"}}"
         }
     ]
