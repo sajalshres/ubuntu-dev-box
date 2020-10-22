@@ -1,8 +1,7 @@
 ---
-os: linux
-matrix:
-  include:
-    - dist: bionic
+arch: amd64          # optional, this is default, routes to a full VM
+os: linux            # optional, this is default
+dist: bionic          # or bionic | xenial | trusty | precise with xenial as default
 
 language: python
 
