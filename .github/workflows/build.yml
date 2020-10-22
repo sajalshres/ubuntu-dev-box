@@ -20,4 +20,4 @@ jobs:
           arguments: "-color=false"
           target: config.json
         env:
-          VAGRANT_CLOUD_TOKEN: ${{ secrets.VAGRANT_ACCESS_TOKEN }}
+          VAGRANT_CLOUD_TOKEN: ${{ secrets.VAGRANT_CLOUD_TOKEN }}
